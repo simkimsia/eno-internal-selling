@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Print Acceptance</title>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/icons.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+            <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="js/modernizr.custom.js"></script>
+        <link rel="author" href="humans.txt">
+        <style type="text/css">
+        article {
+            margin-top: 10px;
+        }
+        #fixed {
+            position: fixed;
+            height: 100px;
+            width: 100%;
+            top: 0px;
+            margin: 0px auto;
+        }
+        div > img {
+            width: auto;
+            height : auto;
+            max-height: 100%;
+            max-width: 100%;
+        }
+        article.before-after > div {
+            padding: 5px;
+            width:48%; 
+            float: left;
+        }
+        article.single > div {
+            padding: 5px;
+            width:95%; 
+            float: left;
+        }
+        article.single > div > img {
+            
+        }
+        .fr {
+            float:right;
+        }
+        .border {
+            border:1px solid gray; 
+        }
+        </style>
+    </head>
+    <body>
+        
+        <div id="st-container" class="st-container">
+
+            <nav class="st-menu st-effect-2" id="menu-1">
+                <h2 class="icon icon-lab">Workflow</h2>
+                <ul>
+                    <li><input type="checkbox" id="before" checked>Before</li>
+                    <li><input type="checkbox" id="after" checked>After</li>
+                
+                </ul>
+
+                <h2 class="icon icon-data">Screenshots</h2>
+                <ul>
+                    <li><input type="checkbox" id="search" checked>Search for job </li>
+                    <li><input type="checkbox" id="sa" checked>Solution Architect </li>
+                    <li><input type="checkbox" id="sa" checked>Solution Architect </li>
+                    <li><input type="checkbox" id="sales" checked>Solution Architect </li>
+                
+                </ul>
+
+                
+            </nav>
+
+            <!-- content push wrapper -->
+            <div class="st-pusher">
+
+                <div class="st-content"><!-- this is the wrapper for the content -->
+                    <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+                        <!-- the content -->
+                        
+                            <h1>Print Acceptance</h1>
+                            <header>
+                                <a href="index.html">Home</a> &gt; 
+                                <a href="process-po.html">Process PO Workflow</a> &gt; 
+                                <span><strong>Print Acceptance</strong></span>
+                            </header>
+                            <div id="st-trigger-effects">
+                            
+                            </div>
+                        
+
+                    </div><!-- /st-content-inner -->
+
+                    
+
+<div id="tabs" style="width:90%;margin:20px auto;">
+  <ul>
+    <li><a href="#tabs-0">Workflow</a></li>
+    <li><a href="#tabs-1">Search and Print</a></li>
+  </ul>
+  <div id="tabs-0">
+    <article>
+        <img src="img/ENO RUPERT workflows - Prepare Acceptance Paper subflow.png" /> 
+    </article>
+
+    <article class="before-after" style="min-height: 100px;overflow: hidden;">
+       <div id="before-div">
+            <span><em>BEFORE</em></span>
+            <img src="img/ENO RUPERT workflows - Process Purchase Order - PSS print Acceptance.png" /> 
+        </div>
+        <div id="after-div" class="fr">
+            <span><em>AFTER</em></span>
+            <img  src="img/ENO RUPERT workflows - Process Purchase Order - PSS print Acceptance using RUPERT.png"> 
+        </div>
+    </article>
+  </div>
+  
+  <div id="tabs-1">
+        <span><em>Search and Print</em></span><br />
+        <img src="videos/search_and_print_acceptance.gif" /> 
+    
+  </div>
+
+</div>
+                        
+
+                        
+
+                </div><!-- /st-content -->
+
+            </div><!-- /st-pusher -->
+
+        </div><!-- /st-container -->
+
+        
+    </body>
+    <script src="js/classie.js"></script>
+    <script src="js/sidebarEffects.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $( "#tabs" ).tabs();
+        
+        $(":checkbox").change(function() {
+
+            var divId = $(this).attr('id') + '-div';
+            var divId = "#" + divId;
+
+            if ($(this).is(':checked')) {
+                $(divId).show();
+            } else {
+                $(divId).hide();
+            }
+        });
+    });
+    </script>
+</html>
